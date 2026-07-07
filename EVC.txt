@@ -1,0 +1,165 @@
+Name. Ruweida shariiF 
+ID C1240264
+Clss CA244
+import java.util.Scanner;
+
+public class evc {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Geli code-ka: ");
+        String code = input.next();
+
+        if (code.equals("*770#")) {
+
+            System.out.println("------------- EVCPlus -------------");
+            System.out.print("Geli PIN-kaaga: ");
+            int pin = input.nextInt();
+
+            if (pin == 2022) {
+
+                System.out.println("\n1. Itus Haraaga");
+                System.out.println("2. Kaarka Hadalka");
+                System.out.println("3. Bixi Biil");
+                System.out.println("4. U Wareeji EVCPlus");
+                System.out.println("5. Warbixin Kooban");
+                System.out.println("6. Salaam Bank");
+                System.out.println("7. Maareynta");
+                System.out.println("8. Bill Payment");
+                System.out.print("Dooro adeeg: ");
+
+                int doorasho = input.nextInt();
+
+                if (doorasho == 1) {
+
+                    System.out.println("Haraagaagu waa $100");
+
+                } else if (doorasho == 2) {
+
+                    System.out.print("Geli lambarka: ");
+                    String number = input.next();
+
+                    System.out.print("Geli lacagta: ");
+                    int lacag = input.nextInt();
+
+                    System.out.println("$" + lacag + " ayaa loogu shubay " + number);
+
+                } else if (doorasho == 3) {
+
+                    System.out.print("Geli lacagta biilka: ");
+                    int lacag = input.nextInt();
+
+                    System.out.println("Waxaad bixisay $" + lacag);
+
+                } else if (doorasho == 4) {
+
+                    System.out.print("Geli lambarka: ");
+                    String number = input.next();
+
+                    System.out.print("Geli lacagta: ");
+                    int lacag = input.nextInt();
+
+                    System.out.print("Geli PIN-ka mar kale: ");
+                    int pin2 = input.nextInt();
+
+                    if (pin2 == 2022) {
+                        System.out.println("$" + lacag + " ayaa loo diray " + number);
+                    } else {
+                        System.out.println("PIN waa qalad.");
+                    }
+
+                } else if (doorasho == 5) {
+
+                    System.out.println("Warbixin Kooban");
+                    System.out.println("Haraaga: $100");
+                    System.out.println("Dirid u dambeysay: $20");
+                    System.out.println("Biil u dambeyay: $10");
+
+                } else if (doorasho == 6) {
+
+                    System.out.println("\n------ Salaam Bank ------");
+                    System.out.println("1. Itus Haraaga");
+                    System.out.println("2. Lacag Dhigasho");
+                    System.out.println("3. Lacag Qaadasho");
+                    System.out.println("4. U Wareeji Account");
+                    System.out.println("5. Ka Bax");
+
+                    System.out.print("Dooro: ");
+                    int bank = input.nextInt();
+
+                    if (bank == 1) {
+
+                        System.out.println("Haraaga Salaam Bank waa $500");
+
+                    } else if (bank == 2) {
+
+                        System.out.print("Geli lacagta: ");
+                        int lacag = input.nextInt();
+
+                        System.out.println("$" + lacag + " ayaa lagu shubay account-kaaga.");
+
+                    } else if (bank == 3) {
+
+                        System.out.print("Geli lacagta: ");
+                        int lacag = input.nextInt();
+
+                        System.out.println("$" + lacag + " ayaa lagala baxay account-kaaga.");
+
+                    } else if (bank == 4) {
+
+                        System.out.print("Geli Account Number: ");
+                        String account = input.next();
+
+                        System.out.print("Geli lacagta: ");
+                        int lacag = input.nextInt();
+
+                        System.out.println("$" + lacag + " ayaa loo wareejiyay " + account);
+
+                    } else {
+
+                        System.out.println("Waad ka baxday Salaam Bank.");
+
+                    }
+
+                } else if (doorasho == 7) {
+
+                    System.out.println("Maareynta");
+                    System.out.println("1. Beddel PIN");
+                    System.out.println("2. Ka Bax");
+
+                    int m = input.nextInt();
+
+                    if (m == 1) {
+                        System.out.print("Geli PIN cusub: ");
+                        int newPin = input.nextInt();
+                        System.out.println("PIN-ka cusub waa " + newPin);
+                    } else {
+                        System.out.println("Waad ka baxday.");
+                    }
+
+                } else if (doorasho == 8) {
+
+                    System.out.print("Geli magaca shirkadda: ");
+                    String company = input.next();
+
+                    System.out.print("Geli lacagta: ");
+                    int lacag = input.nextInt();
+
+                    System.out.println("Waxaad bixisay $" + lacag + " shirkadda " + company);
+
+                } else {
+
+                    System.out.println("Doorasho qalad ah.");
+
+                }
+
+            } else {
+
+                System.out.println("PIN-ka waa qalad.");
+
+            }
+
+            input.close();
+        }
+    }
+}
